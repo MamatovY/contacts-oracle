@@ -61,7 +61,7 @@ function App() {
     setContacts(newContacts.sort((obj1, obj2) => obj1.name.toUpperCase() < obj2.name.toUpperCase() ? -1 : 1))
   }
 
-  const searchEmp = (items, term) => {
+  const searchContact = (items, term) => {
     if (term.length === 0) {
       return items
     }
@@ -71,7 +71,7 @@ function App() {
     })
   }
 
-  const visibleData = searchEmp(contacts, search)
+  const visibleData = searchContact(contacts, search)
 
   return (
     <BrowserRouter>
@@ -80,7 +80,6 @@ function App() {
           <Route path="/" element={
             <Main setSearch={setSearch} search={search} deleteContacts={deleteContacts} process={process} contacts={visibleData} />
           } />
-
           <Route path='/addContact' element={<AddPage addContact={addContact} />} />
           <Route path='/editContact/:id' element={<EditPage deleteContacts={deleteContacts} editContact={editContact} getContact={getContact} />} />
         </Routes>

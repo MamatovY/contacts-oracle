@@ -85,3 +85,19 @@
         display: block;
     }
 }
+
+@media(min-width: 768px) {
+    .singlePage {
+        &__finish {
+            &-img {
+                img {
+                    width: 20%;
+                }
+            }
+
+            &-btn {
+                width: 30%;
+            }
+        }
+    }
+}

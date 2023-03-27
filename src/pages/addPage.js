@@ -55,18 +55,21 @@ const AddPage = ({ addContact }) => {
                 </form>
 
                 <div className={finish ? 'singlePage__finish active' : 'singlePage__finish'}>
-                    <div className="singlePage__finish-img">
-                        <img src={img} alt="" />
+                    <div className="container">
+
+                        <div className="singlePage__finish-img">
+                            <img src={img} alt="" />
+                        </div>
+                        <h2 >
+                            Congratulations!
+                        </h2>
+                        <div className="singlePage__finish-title">
+                            Your new contact: {name} has been created!
+                        </div>
+                        <Link to='/' className="singlePage__finish-btn">
+                            Back to home
+                        </Link>
                     </div>
-                    <h2 >
-                        Congratulations!
-                    </h2>
-                    <div className="singlePage__finish-title">
-                        Your new contact: {name} has been created!
-                    </div>
-                    <Link to='/' className="singlePage__finish-btn">
-                        Back to home
-                    </Link>
                 </div>
             </div>
 

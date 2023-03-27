@@ -71,11 +71,8 @@ h4 {
 .textInput {
   border: 1px solid rgba(175, 181, 213, 0.4);
   border-radius: 59px;
-  @include adaptive-value('padding-top', 26, 10, 1);
-  @include adaptive-value('padding-bottom', 26, 10, 1);
-  @include adaptive-value('padding-left', 52, 26, 1);
-  @include adaptive-value('padding-right', 52, 26, 1);
-  @include adaptive-value('margin-bottom', 60, 30, 1);
+  padding: 10px 26px;
+  margin-bottom: 30px;
 }
 
 .container {
@@ -116,8 +113,4 @@ button {
 }
 
 
-@media(min-width:600px) {
-  .container {
-    @include adaptive-indent('padding', 0, 0, 16, 8, 1);
-  }
-}
+@media(min-width:768px) {}
