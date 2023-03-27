@@ -8,7 +8,6 @@ function App() {
   const [contacts, setContacts] = useState([])
   const [search, setSearch] = useState('')
   const { process, getAllContacts, setProcess } = useBookService()
-  console.log('render');
 
   useEffect(() => {
     const local = JSON.parse(localStorage.getItem('contacts'));
@@ -19,6 +18,7 @@ function App() {
       setProcess('finish')
       setContacts(local.sort((obj1, obj2) => obj1.name.toUpperCase() < obj2.name.toUpperCase() ? -1 : 1))
     }
+    //eslint-disable-next-line
   }, [])
 
   useEffect(() => {
@@ -27,7 +27,7 @@ function App() {
       setProcess('finish')
       localStorage.setItem('contacts', JSON.stringify(contacts));
     }
-  }, [contacts]);
+  }, [contacts, setProcess]);
 
   const update = (data) => {
     localStorage.setItem('contacts', JSON.stringify(data));
@@ -35,12 +35,14 @@ function App() {
   }
 
   const getContact = (id) => {
+    //eslint-disable-next-line
     const item = contacts.filter(item => item.id == id)
     return item
   }
 
   const editContact = (id, name, phone) => {
     const newContacts = contacts.map((item) => {
+      //eslint-disable-next-line
       if (item.id == id) {
         return { ...item, name, phone }
       }

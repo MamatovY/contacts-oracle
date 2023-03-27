@@ -1,12 +1,8 @@
 import { Link } from 'react-router-dom'
 import { MdPersonAddAlt1 } from 'react-icons/md'
-import { AiOutlineSearch } from 'react-icons/ai'
 import './header.scss'
 
 const Header = ({ setSearch }) => {
-    const submit = (e) => {
-        e.preventDefault()
-    }
 
     return (
         <header className='header'>
