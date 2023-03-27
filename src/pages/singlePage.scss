@@ -39,10 +39,11 @@
             background: #2A0096;
             border: 1px solid #2A2E70;
             border-radius: 54px;
+            width: 50%;
+            margin: 0 auto;
             @include adaptive-value('height', 75, 50, 1);
             @include adaptive-value('bottom', 60, 30, 1);
-            @include adaptive-value('margin-right', 400, 50, 1);
-            @include adaptive-value('margin-left', 400, 50, 1);
+
             cursor: pointer;
         }
     }
