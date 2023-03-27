@@ -1,0 +1,45 @@
+@import './../../assets/scss/mixin.scss';
+
+.contactItem {
+    background: rgba($color: #DBE3FF, $alpha: 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    @include adaptive-value('gap', 25, 5, 1);
+    @include adaptive-value('border-radius', 20, 10, 1);
+    @include adaptive-value('margin-bottom', 16, 8, 1);
+    @include adaptive-value('padding-top', 32, 16, 1);
+    padding-right: 16px;
+    @include adaptive-value('padding-bottom', 32, 16, 1);
+    @include adaptive-value('padding-left', 32, 16, 1);
+
+
+
+
+    &__name {}
+
+    &__btn {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        @include adaptive-value('gap', 15, 3, 1);
+
+
+        a {
+            text-align: center;
+            border: 1px solid #DBE3FF;
+            border: 1px solid rgba(175, 181, 213, 0.4);
+            border-radius: 50%;
+            @include adaptive-value('padding', 11, 5.5, 1);
+
+            svg {
+                width: 60%;
+            }
+        }
+
+        a:focus {
+            color: #000;
+            background: rgba(219, 227, 255, 0.8);
+        }
+    }
+}

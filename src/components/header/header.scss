@@ -1,0 +1,41 @@
+@import './../../assets/scss/mixin.scss';
+
+.header {
+    @include adaptive-value('margin-top', 150, 75, 1);
+    @include adaptive-value('margin-bottom', 48, 24, 1);
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        @include adaptive-value('margin-bottom', 60, 36, 1);
+
+        &-add {
+            text-align: center;
+            background: #4200D8;
+            border-radius: 50%;
+            @include adaptive-value('width', 62, 31, 1);
+
+            svg {
+                width: 50%;
+            }
+        }
+    }
+
+    &__search {
+        border: 1px solid rgba(175, 181, 213, 0.4);
+        border-radius: 59px;
+        @include adaptive-value('padding-top', 26, 10, 1);
+        @include adaptive-value('padding-bottom', 26, 10, 1);
+        @include adaptive-value('padding-left', 52, 26, 1);
+        @include adaptive-value('padding-right', 52, 26, 1);
+
+        form {
+            display: grid;
+            grid-template-columns: 10fr 2fr;
+
+            svg {
+                width: 50%;
+            }
+        }
+    }
+}

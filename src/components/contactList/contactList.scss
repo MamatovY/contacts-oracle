@@ -1,0 +1,11 @@
+@import './../../assets/scss/mixin.scss';
+
+.contactList {
+    &__section {
+        @include adaptive-value('margin-bottom', 50, 25, 1);
+
+        h3 {
+            margin-left: 2%;
+        }
+    }
+}
