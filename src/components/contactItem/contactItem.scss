@@ -37,7 +37,8 @@
             }
         }
 
-        a:focus {
+        a:focus,
+        a:hover {
             color: #000;
             background: rgba(219, 227, 255, 0.8);
         }
